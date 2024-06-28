@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: challenge_database
+      POSTGRES_USER: user_LEYLINE
+      POSTGRES_PASSWORD: user_LEYLINE_1234
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
